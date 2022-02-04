@@ -1,10 +1,17 @@
 package sort;
 /**
- * N: 400,000
+ * N: 100,000
  * 
- * 평균수행시간 1115ms
+ * 평균수행시간: 13902ms
+ * 최악수행시간: 1978ms
  */
-public class BubbleSort implements MySort{
+public class BubbleSort extends MySort{
+	private static final String SORT_NAME = "BubbleSort";
+	
+	public BubbleSort() {
+		super(SORT_NAME);
+	}
+	
 	public int[] sort(int[] arr) {
 		for(int i=0; i<arr.length; i++) {
 			for(int j=0; j<arr.length-i-1; j++) {

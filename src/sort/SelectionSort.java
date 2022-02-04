@@ -1,10 +1,17 @@
 package sort;
 /**
- * N: 400,000
+ * N: 100,000
  * 
- * 평균수행시간 1115ms
+ * 평균수행시간: 1027ms
+ * 최악수행시간: 1013ms
  */
-public class SelectionSort implements MySort {
+public class SelectionSort extends MySort {
+	private static final String SORT_NAME = "SelectionSort";
+	
+	public SelectionSort() {
+		super(SORT_NAME);
+	}
+
 	public int[] sort(int[] arr) {
 		for(int i=0; i<arr.length; i++) {
 			int min = Integer.MAX_VALUE;
