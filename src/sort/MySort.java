@@ -7,14 +7,14 @@ package sort;
  */
 public abstract class MySort {
 	private static final int ARRAY_LENGTH = 100000;
-	private static final int REPEAT_TIME = 5;
+//	private static final int REPEAT_TIME = 5;
 	private static String sortName;
 	
 	public MySort(String sortName) {
 		MySort.sortName = sortName;
 	}
 	
-	public abstract int[] sort(int[] arr);
+	public abstract void sort(int[] arr);
 	
 	public static void run(MySort mySort) {
 		System.out.println("---------- "+sortName+" ----------");
@@ -37,23 +37,23 @@ public abstract class MySort {
 		mySort.printArr(arr);
 	}
 	
-	// 평균 시간 테스트
+	// 평균 시간 테스트(랜덤배열의 정렬시간)
 	private void runningTest2(MySort mySort) {
 		int[] arr = mySort.getRandomArr(ARRAY_LENGTH);
 
 		long start = System.currentTimeMillis();
-		arr = mySort.sort(arr);
+		mySort.sort(arr);
 		long end = System.currentTimeMillis();
 		
 		System.out.println("\n\n Average running time: " + (end-start) + "ms");
 	}
 	
-	// 최악 시간 테스트(역순정렬된 큰 배열의 정렬 시간)
+	// 최악 시간 테스트(역순정렬된 배열의 정렬 시간)
 	private void runningTest3(MySort mySort) {
 		int[] arr = mySort.getDescendingArr(ARRAY_LENGTH);
 
 		long start = System.currentTimeMillis();
-		arr = mySort.sort(arr);
+		mySort.sort(arr);
 		long end = System.currentTimeMillis();
 		
 		System.out.println("\n\n Worst running time: " + (end-start) + "ms");

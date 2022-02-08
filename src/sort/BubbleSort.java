@@ -12,7 +12,7 @@ public class BubbleSort extends MySort{
 		super(SORT_NAME);
 	}
 	
-	public int[] sort(int[] arr) {
+	public void sort(int[] arr) {
 		for(int i=0; i<arr.length; i++) {
 			for(int j=0; j<arr.length-i-1; j++) {
 				if(arr[j] > arr[j+1]) {
@@ -22,7 +22,5 @@ public class BubbleSort extends MySort{
 				}
 			}
 		}
-		
-		return arr;
 	}
 }

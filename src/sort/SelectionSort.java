@@ -12,7 +12,7 @@ public class SelectionSort extends MySort {
 		super(SORT_NAME);
 	}
 
-	public int[] sort(int[] arr) {
+	public void sort(int[] arr) {
 		for(int i=0; i<arr.length; i++) {
 			int min = Integer.MAX_VALUE;
 			int minIndex = -1;
@@ -28,7 +28,5 @@ public class SelectionSort extends MySort {
 			arr[i] = arr[minIndex];
 			arr[minIndex] = temp;
 		}
-		
-		return arr;
 	}
 }

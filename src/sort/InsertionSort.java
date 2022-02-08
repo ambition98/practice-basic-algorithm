@@ -13,7 +13,7 @@ public class InsertionSort extends MySort {
 	}
 
 	@Override
-	public int[] sort(int[] arr) {
+	public void sort(int[] arr) {
 		for(int i=1; i<arr.length; i++) {
 			int key = arr[i];
 			
@@ -24,7 +24,5 @@ public class InsertionSort extends MySort {
 			
 			arr[j+1] = key;
 		}
-		
-		return arr;
 	}
 }

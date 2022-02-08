@@ -17,11 +17,10 @@ public class QuickSort extends MySort {
 	// n 크기가 커서 재귀적으로 구현 시 Stack Overflow 발생
 	// 따라서 스택으로 변경
 	@Override
-	public int[] sort(int[] arr) {
+	public void sort(int[] arr) {
 		Stack<QuickSortElement> stack = new Stack<QuickSortElement>();
-//		if(start >= end)
-//			return arr;
 		stack.push(new QuickSortElement(0, arr.length-1));
+		
 		while(!stack.isEmpty()) {
 			QuickSortElement element = stack.pop();
 			int start = element.start;
@@ -55,8 +54,6 @@ public class QuickSort extends MySort {
 			}
 			
 		}
-		
-		return arr;
 	}
 	
 	private class QuickSortElement {
