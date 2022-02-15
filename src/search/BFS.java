@@ -38,22 +38,18 @@ public class BFS {
 			
 			
 			if(x-1 >= 0 && maze[x-1][y] == 0 && isVisited[x-1][y] == false) {
-//				isVisited[x-1][y] = true;
 				queue.add(new Pos(x-1, y));
 			}
 			
 			if(x+1 < maze.length && maze[x+1][y] == 0 && isVisited[x+1][y] == false) {
-//				isVisited[x+1][y] = true;
 				queue.add(new Pos(x+1, y));
 			}
 			
 			if(y-1 >= 0 && maze[x][y-1] == 0 && isVisited[x][y-1] == false) {
-//				isVisited[x][y-1] = true;
 				queue.add(new Pos(x, y-1));
 			}
 			
 			if(y+1 < maze.length && maze[x][y+1] == 0 && isVisited[x][y+1] == false) {
-//				isVisited[x][y+1] = true;
 				queue.add(new Pos(x, y+1));
 			}
 			
@@ -65,17 +61,17 @@ public class BFS {
 			System.out.println("탈출구가 없는 미로입니다.");
 	}
 	
-}
-class Pos {
-	int x;
-	int y;
-	
-	public Pos(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
-	
-	public boolean equals(Pos obj) {
-		return (this.x == obj.x) && (this.y == obj.y);
+	private static class Pos {
+		int x;
+		int y;
+		
+		public Pos(int x, int y) {
+			this.x = x;
+			this.y = y;
+		}
+		
+		public boolean equals(Pos obj) {
+			return (this.x == obj.x) && (this.y == obj.y);
+		}
 	}
 }
