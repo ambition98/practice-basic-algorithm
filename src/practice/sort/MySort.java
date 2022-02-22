@@ -1,4 +1,4 @@
-package sort;
+package practice.sort;
 /**
  * @author YJ_Lee
  * 

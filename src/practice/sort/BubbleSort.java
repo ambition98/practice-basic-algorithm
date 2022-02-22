@@ -1,4 +1,4 @@
-package sort;
+package practice.sort;
 /**
  * N: 100,000
  * 

@@ -1,4 +1,4 @@
-package etc;
+package practice.etc;
 
 public class UnionFind {
 
@@ -22,14 +22,14 @@ public class UnionFind {
 	}
 	
 	//재귀호출로 실제 부모를 찾음
-	private static int getParent(int[] parent, int n) {
+	public static int getParent(int[] parent, int n) {
 		if(parent[n] == n)
 			return n;
 		
 		return parent[n] = getParent(parent, parent[n]);
 	}
 	
-	private static void unionParent(int[] parent, int a, int b) {
+	public static void unionParent(int[] parent, int a, int b) {
 		int aParent = getParent(parent, a);
 		int bParent = getParent(parent, b);
 		
@@ -39,7 +39,7 @@ public class UnionFind {
 			parent[a] = b;
 	}
 	
-	private static boolean isSameUnion(int[] parent, int a, int b) {
+	public static boolean isSameUnion(int[] parent, int a, int b) {
 		int aParent = getParent(parent, a);
 		int bParent = getParent(parent, b);
 		

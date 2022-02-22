@@ -1,4 +1,4 @@
-package etc;
+package practice.etc;
 
 public class Traversal {
 	public static void main(String[] args) {

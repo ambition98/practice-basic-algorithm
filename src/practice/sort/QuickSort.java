@@ -1,4 +1,4 @@
-package sort;
+package practice.sort;
 
 import java.util.Stack;
 /**
