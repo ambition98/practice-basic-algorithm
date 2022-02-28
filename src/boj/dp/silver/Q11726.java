@@ -1,4 +1,4 @@
-package boj.dp;
+package boj.dp.silver;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

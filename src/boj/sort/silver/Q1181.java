@@ -1,4 +1,4 @@
-package boj.sort;
+package boj.sort.silver;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
