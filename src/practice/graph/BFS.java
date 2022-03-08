@@ -1,10 +1,11 @@
-package practice.search;
+package practice.graph;
 
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class DFS {
+public class BFS {
 	public static void main(String[] args) {
-		Stack<Pos> stack = new Stack<>();
+		Queue<Pos> queue = new LinkedList<Pos>();
 		
 		int mazeSize = 6;
 		boolean[][] isVisited = new boolean[mazeSize][mazeSize];
@@ -20,33 +21,38 @@ public class DFS {
 		Pos start = new Pos(1, 0);
 		Pos end = new Pos(4, 5);
 		
-		stack.push(start);
-		while(!stack.isEmpty()) {
-			Pos currentPos = stack.pop();
+		queue.add(start);
+		while(!queue.isEmpty()) {
+			Pos currentPos = queue.poll();
 			int x = currentPos.x;
 			int y = currentPos.y;
+			
 			isVisited[x][y] = true;
+			
 			System.out.println("[Current position] x: " + currentPos.x + ", y: " + currentPos.y);
+			
 			if(currentPos.equals(end)) {
 				isSucceed = true;
 				break;
 			}
 			
+			
 			if(x-1 >= 0 && maze[x-1][y] == 0 && isVisited[x-1][y] == false) {
-				stack.push(new Pos(x-1, y));
+				queue.add(new Pos(x-1, y));
 			}
 			
 			if(x+1 < maze.length && maze[x+1][y] == 0 && isVisited[x+1][y] == false) {
-				stack.push(new Pos(x+1, y));
+				queue.add(new Pos(x+1, y));
 			}
 			
 			if(y-1 >= 0 && maze[x][y-1] == 0 && isVisited[x][y-1] == false) {
-				stack.push(new Pos(x, y-1));
+				queue.add(new Pos(x, y-1));
 			}
 			
 			if(y+1 < maze.length && maze[x][y+1] == 0 && isVisited[x][y+1] == false) {
-				stack.push(new Pos(x, y+1));
+				queue.add(new Pos(x, y+1));
 			}
+			
 		}
 		
 		if(isSucceed)
@@ -59,7 +65,7 @@ public class DFS {
 		int x;
 		int y;
 		
-		Pos(int x, int y) {
+		public Pos(int x, int y) {
 			this.x = x;
 			this.y = y;
 		}
