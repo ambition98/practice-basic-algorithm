@@ -2,7 +2,6 @@ package boj.datastructure.silver;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class Q10845 {
