@@ -2,7 +2,6 @@ package boj.greedy.silver;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Q1439 {
 

@@ -1,9 +1,9 @@
 package practice.graph;
 
+import practice.etc.UnionFind;
+
 import java.util.ArrayList;
 import java.util.Collections;
-
-import practice.etc.UnionFind;
 
 public class Kruskal {
 
