@@ -1,4 +1,4 @@
-package boj.graph.gold;
+package boj.graph.search.gold;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
