@@ -1,7 +1,7 @@
 package leetcode
 
 //https://foxtrot.tistory.com/11
-private class `27RemoveElement` {
+private class `27_RemoveElement` {
     fun removeElement(nums: IntArray, `val`: Int): Int {
         var k = 0
         var idx = 0
